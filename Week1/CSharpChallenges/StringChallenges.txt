@@ -1,0 +1,23 @@
+Challenge 1 – String and its methods
+
+- Declare a string variable and an integer variable but don't assign values to them.
+- Print to the console “Please enter your message and press enter”.
+- Get a string from the user. We are not worried about input validation right now
+    so if your user inputs unexpected values, your program will give unexpected results.
+
+- The user will enter their message.
+- Assign that entered string to the string variable which you declared initially.
+- Print to the console "Please enter a number LESS THAN the length of your string and press enter".
+- Assign that entered string to the int variable which you declared initially. 
+- Remember to parse the input to an int.
+- Declare a char variable but do not assign a value to it.
+- Ask the user "For which character should I search in your original message?"
+- Same the user input to the char variable. **remember we are not validating 
+    user input at this time so is the letter (char value) isn't in the message, 
+    you won't be able to find it.
+- Ask the user for their first name and save it to a string variable.
+- Ask the user for their last name and save it to a variable.
+- Print to the console a concatination of the users first and last name.
+- Print to the console the users initials
+- Print to the console the users first name and the first two letters of their last name.
+- Print the length of the users last name to the console.

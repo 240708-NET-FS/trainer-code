@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-16"?><Person xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="James"><height>12.34</height><weight>56.78</weight></Person>

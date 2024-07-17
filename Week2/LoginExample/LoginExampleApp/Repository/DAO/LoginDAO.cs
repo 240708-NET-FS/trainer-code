@@ -28,20 +28,25 @@ public class LoginDAO : IDAO<Login>
 
     public ICollection<Login> GetAll()
     {
-        List<Login> logins = _context.Logins.ToList();
+        List<Login> logins = _context.Logins.Include(l => l.User)
+                                            .ToList();
         return logins;
     }
 
     public Login GetById(int ID)
     {
-        Login login = _context.Logins.FirstOrDefault(l => l.LoginID == ID);
+        Login login = _context.Logins
+                            .Include(l => l.User)
+                            .FirstOrDefault(l => l.LoginID == ID);
 
         return login;
     }
 
     public void Update(Login newItem)
     {
-        Login originalLogin = _context.Logins.FirstOrDefault(l => l.LoginID == newItem.LoginID);
+        Login originalLogin = _context.Logins
+                                    .Include(l => l.User)
+                                    .FirstOrDefault(l => l.LoginID == newItem.LoginID);
 
         if (originalLogin != null)
         {
@@ -50,5 +55,14 @@ public class LoginDAO : IDAO<Login>
             _context.Logins.Update(originalLogin);
             _context.SaveChanges();
         }
+    }
+
+    public Login GetLoginByUsernameAndPassword(string username, string password)
+    {
+        Login login = _context.Logins
+                                .Include(l => l.User)
+                                .FirstOrDefault(l => l.Username == username && l.Password == password);
+
+        return login;
     }
 }

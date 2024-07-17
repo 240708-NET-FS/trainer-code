@@ -7,4 +7,10 @@ public class User
     public string LastName {get;set;}
 
     public Login Login {get;set;}
+
+
+    public override string ToString()
+    {
+        return $"{UserID} {FirstName} {LastName}";
+    }
 }

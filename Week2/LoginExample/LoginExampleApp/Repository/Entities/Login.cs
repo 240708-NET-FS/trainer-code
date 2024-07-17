@@ -9,4 +9,9 @@ public class Login
     public int UserID {get;set;}
 
     public User User {get;set;}
+
+    public override string ToString()
+    {
+        return $"{LoginID} {Username} {Password} {UserID} {User}";
+    }
 }

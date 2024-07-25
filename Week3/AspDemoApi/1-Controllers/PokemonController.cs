@@ -21,10 +21,19 @@ namespace AspDemoApi.Controllers;
 
         //My first method will be an HttpPost, so that I can persist something to my database
         [HttpPost]
-        public async Task<IActionResult> CreatePokemon(Pokemon pokemonToStore)
+        public async Task<IActionResult> CreatePokemon(PokemonDTO pokemonToStore)
         { //This method runs asynchronously. It returns an IActionResult (in this case, a 200 OK for now) 
-        //It returns a task, that eventually resolves 
-            return Ok();
+        //It returns a task, that eventually resolves
+        
+            try
+            {
+                var newPokemon = _pokeService.CreateNewPokemon(pokemonToStore);
+                return Ok(newPokemon);
+            }
+            catch(Exception e)
+            {
+                return BadRequest(e.Message);
+            }            
         }
 
     }

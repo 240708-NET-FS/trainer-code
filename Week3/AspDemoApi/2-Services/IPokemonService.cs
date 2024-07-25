@@ -5,5 +5,5 @@ namespace AspDemoApi.Services;
 
 public interface IPokemonService 
 {
-    public Pokemon CreateNewPokemon(Pokemon pokemonToCreate);
+    public Pokemon CreateNewPokemon(PokemonDTO pokemonToCreate);
 }

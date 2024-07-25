@@ -1,13 +1,27 @@
+using AspDemoApi.Data;
 using AspDemoApi.Models;
 
 namespace AspDemoApi.Services;
 
 public class PokemonService : IPokemonService {
 
+    private readonly IPokeRepo _pokeRepo;
 
-    public Pokemon CreateNewPokemon(Pokemon pokemonToCreate)
+    public PokemonService(IPokeRepo pokeRepo)
     {
-        return new Pokemon();
+        this._pokeRepo = pokeRepo;
+    }
+
+    public Pokemon CreateNewPokemon(PokemonDTO pokemonToCreate)
+    {
+        Pokemon newPokemon = new(){
+            DexId = pokemonToCreate.DexId,
+            Name = pokemonToCreate.Name,
+            Type1 = pokemonToCreate.Type1,
+            Type2 = pokemonToCreate.Type2
+        };
+
+        return _pokeRepo.CreateNewPokemon(newPokemon);
     }
 
 }

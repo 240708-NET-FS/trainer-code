@@ -1,4 +1,5 @@
 using AspDemoApi.Models;
+using AspDemoApi.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AspDemoApi.Controllers;
@@ -9,11 +10,14 @@ namespace AspDemoApi.Controllers;
     public class PokemonController : ControllerBase
     {
         //Eventually, I will add my service layer object here, using dependency injection
+        private readonly IPokemonService _pokeService;
 
 
         //Im going to create a constructor for my controller, ASP.NET will handle actually instantiating this
         //controller object during the runtime of my app. For now, it will remain empty. 
-        public PokemonController() { }
+        public PokemonController(IPokemonService pokeService) { 
+            this._pokeService = pokeService;
+        }
 
         //My first method will be an HttpPost, so that I can persist something to my database
         [HttpPost]

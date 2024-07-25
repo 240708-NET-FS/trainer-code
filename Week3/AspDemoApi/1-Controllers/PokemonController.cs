@@ -1,5 +1,5 @@
-using Microsoft.AspNetCore.Mvc;
 using AspDemoApi.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace AspDemoApi.Controllers;
 

@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace AspDemoApi.Models;
 
 public class Pokemon
@@ -8,5 +10,8 @@ public class Pokemon
     public string Name { get; set; }
     public string Type1 { get; set; }
     public string? Type2 { get; set; }
+
+    //Setting our one to many between trainers and pokemon
+    public Trainer Owner { get; set; }
 
 }

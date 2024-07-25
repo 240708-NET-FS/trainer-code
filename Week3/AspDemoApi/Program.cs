@@ -1,4 +1,6 @@
+using AspDemoApi.Data;
 using AspDemoApi.Services;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,10 @@ builder.Services.AddSwaggerGen();
 //Here we will register our dependencies (Services and DbContext, etc) so that we can satisfy our constructors
 //and inject dependecies where needed
 builder.Services.AddScoped<IPokemonService, PokemonService>();
+builder.Services.AddScoped<IPokeRepo, PokeRepo>();
+builder.Services.AddDbContext<PokemonDBContext>(options => 
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 
 builder.Logging.AddConsole();
 

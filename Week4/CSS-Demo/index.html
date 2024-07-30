@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- These style tags are an example of internal CSS styling.-->
+    <style>
+        /*This is a CSS comment, notice it's different from the surrounding HTML
+        Anything inside of the style tag in an HTML document is treated as CSS by your IDE.
+        
+        This "li" is an example of an element selector. It is not very specific, it tells your browser to 
+        apply the style within the curly braces to ALL elements of that tag. In this case, we are telling our 
+        browser to color EVERY li element red. 
+        */
+        li {
+            color: red;
+        }
+    </style>
+    <!-- This is an example of linking a style sheet. We use a link element with a relationship set to 
+     "stylesheet", and we give it a relative path (starting from this file's directory) to the .css file.-->
+    <link rel="stylesheet" href="Styles/styles.css">
+
+
+</head>
+<body>
+
+<div>
+    <!-- This is an example of inline CSS, we add our styling directly into our HTML element-->
+    <p style="color: chocolate;" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas massa ante, porta a mattis id, 
+        auctor blandit eros. Aenean eget nulla ultricies, vehicula tellus in, condimentum massa. 
+        Etiam consequat et elit non rutrum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices 
+        posuere cubilia curae; Phasellus ut convallis tortor, sit amet semper lacus. Phasellus tempor 
+        libero ut ante sollicitudin auctor. Etiam rhoncus nisl sit amet elementum semper. Nullam cursus 
+        ligula id leo luctus tempor. Vivamus rutrum ullamcorper neque, in sollicitudin odio tempus non. 
+        Sed id rutrum magna. Curabitur quis odio eget nisi tempus finibus a nec nunc. Vivamus non mi molestie, 
+        pretium est nec, faucibus enim.</p>
+</div>
+
+<div class="myDiv">
+    <p class="loremText" id="FirstP">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas massa ante, porta a mattis id, 
+        auctor blandit eros. Aenean eget nulla ultricies, vehicula tellus in, condimentum massa. 
+        Etiam consequat et elit non rutrum.</p>
+    <p class="loremText">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices 
+        posuere cubilia curae; Phasellus ut convallis tortor, sit amet semper lacus. Phasellus tempor 
+        libero ut ante sollicitudin auctor.</p>
+    <p class="loremText">Etiam rhoncus nisl sit amet elementum semper. Nullam cursus 
+        ligula id leo luctus tempor. Vivamus rutrum ullamcorper neque, in sollicitudin odio tempus non. 
+        Sed id rutrum magna.</p>
+</div>
+
+<div>
+    <ol>
+        <li>First Item</li>
+        <li>Second Item</li>
+        <li>Third Iten</li>
+    </ol>
+</div>
+
+    
+</body>
+</html>

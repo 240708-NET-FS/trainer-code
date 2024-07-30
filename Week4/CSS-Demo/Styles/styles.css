@@ -1,0 +1,17 @@
+
+/* This is my external stylesheet, that I linked to in my HTML document. */
+
+/* This is a class selector, it selects all elements that you have given a particular class to */
+.myDiv {
+    background-color: rgb(45, 133, 133);
+}
+
+/* This is an ID selector, it selects the specific element with the given ID */
+#FirstP {
+    color: white;
+}
+
+.loremText {
+    color: purple;
+}
+    

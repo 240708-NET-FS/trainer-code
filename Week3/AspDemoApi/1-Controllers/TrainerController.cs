@@ -1,3 +1,4 @@
+using AspDemoApi.DTO;
 using AspDemoApi.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,7 +16,27 @@ public class TrainerController : ControllerBase
     }
 
     //CRUD
-    
+    [HttpPost]
+    public async Task<IActionResult> CreateTrainer(TrainerDTO newTrainer)
+    {
+        return Ok(await _trainerService.CreateTrainer(newTrainer));
+    }
 
+    [HttpGet]
+    public async Task<IActionResult> GetAllTrainers()
+    {
+        return Ok(await _trainerService.GetAllTrainers());
+    }
 
+    [HttpPut]
+    public async Task<IActionResult> UpdateTrainer()
+    {
+        throw new NotImplementedException();
+    }
+
+    [HttpDelete]
+    public async Task<IActionResult> DeleteTrainer()
+    {
+        throw new NotImplementedException();
+    }
 }

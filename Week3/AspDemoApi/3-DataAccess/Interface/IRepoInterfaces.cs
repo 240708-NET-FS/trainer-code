@@ -4,10 +4,11 @@ namespace AspDemoApi.Data;
 
 public interface IPokeRepo 
 {
-    public Pokemon CreateNewPokemon(Pokemon pokemonToCreate);
+    Pokemon CreateNewPokemon(Pokemon pokemonToCreate);
 }
 
 public interface ITrainerRepo
 {
-    
+    Task<Trainer> CreateNewTrainer(Trainer newTrainer);
+    Task<List<Trainer>> GetAllTrainers();
 }

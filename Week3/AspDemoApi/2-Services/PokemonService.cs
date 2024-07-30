@@ -1,5 +1,6 @@
 using AspDemoApi.Data;
 using AspDemoApi.DTO;
+using pUtil = AspDemoApi.Utilities.PokemonUtility;
 
 namespace AspDemoApi.Services;
 
@@ -14,13 +15,7 @@ public class PokemonService : IPokemonService {
 
     public Pokemon CreateNewPokemon(PokemonDTO pokemonToCreate)
     {
-        Pokemon newPokemon = new(){
-            DexId = pokemonToCreate.DexId,
-            Name = pokemonToCreate.Name,
-            Type1 = pokemonToCreate.Type1,
-            Type2 = pokemonToCreate.Type2
-        };
-
+        Pokemon newPokemon = pUtil.DTOToPokemon(pokemonToCreate);
         return _pokeRepo.CreateNewPokemon(newPokemon);
     }
 

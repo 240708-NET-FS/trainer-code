@@ -10,5 +10,6 @@ public interface IPokemonService
 
 public interface ITrainerService
 {
-    
+    Task<Trainer> CreateTrainer(TrainerDTO newTrainer);
+    Task<List<Trainer>> GetAllTrainers();
 }

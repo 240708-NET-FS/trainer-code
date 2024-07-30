@@ -2,10 +2,10 @@
 
 #nullable disable
 
-namespace AspDemoApi.Migrations
+namespace AspDemo.API.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialPokeDBCreation : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -34,7 +34,7 @@ namespace AspDemoApi.Migrations
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Type1 = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Type2 = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    OwnerTrainerId = table.Column<int>(type: "int", nullable: false)
+                    OwnerTrainerId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -43,8 +43,7 @@ namespace AspDemoApi.Migrations
                         name: "FK_Pokemon_Trainers_OwnerTrainerId",
                         column: x => x.OwnerTrainerId,
                         principalTable: "Trainers",
-                        principalColumn: "TrainerId",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "TrainerId");
                 });
 
             migrationBuilder.CreateIndex(

@@ -7,7 +7,7 @@ For P2, you and your team will create a full stack web application utilizing the
 ## Requirements
 
 - Application must build and run.
-- xUnit Testing (70% code coverage for Services and Models layer) for backend.
+- xUnit Testing (70% code coverage for Services + Utilities and Models layer) for backend.
 - Utilize an external API.
 - Allows for multiple users to authenticate and store their data.
 - HTML/CSS/JS or React front-end.

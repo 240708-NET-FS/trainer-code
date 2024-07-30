@@ -38,6 +38,7 @@ public class UnitTest1
         Mock<ITrainerRepo> _trainerRepo = new();
         TrainerService trainerService = new(_trainerRepo.Object);
 
+        //                                                          Task.FromResult is required because the original method call is async
         _trainerRepo.Setup(repo => repo.GetTrainerById(id)).Returns(Task.FromResult(MockTrainersList.FirstOrDefault(t => t.TrainerId == id)));
 
 

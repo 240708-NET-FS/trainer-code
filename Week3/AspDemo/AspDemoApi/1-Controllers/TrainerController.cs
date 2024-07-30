@@ -1,5 +1,6 @@
 using AspDemoApi.DTO;
 using AspDemoApi.Services;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AspDemoApi.Controllers;
@@ -31,7 +32,11 @@ public class TrainerController : ControllerBase
     [HttpGet("{id}")]
     public async Task<IActionResult> GetTrainersById(int id)
     {
-        return Ok(await _trainerService.GetTrainerById(id));
+        var trainer = await _trainerService.GetTrainerById(id);
+
+        if(trainer is null) return BadRequest("Trainer does not exist!");
+        
+        return Ok(trainer);
     }
 
     [HttpPut]

@@ -1,4 +1,4 @@
-namespace AspDemoApi.Models;
+namespace AspDemoApi.DTO;
 
 public class PokemonDTO
 {   

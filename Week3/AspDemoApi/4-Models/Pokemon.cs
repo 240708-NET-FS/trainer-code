@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace AspDemoApi.Models;
+namespace AspDemoApi.DTO;
 
 public class Pokemon
 {   

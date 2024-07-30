@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using AspDemoApi.Models;
+using AspDemoApi.DTO;
 
 namespace AspDemoApi.Data;
 

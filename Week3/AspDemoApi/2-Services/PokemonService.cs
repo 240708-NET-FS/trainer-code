@@ -1,5 +1,5 @@
 using AspDemoApi.Data;
-using AspDemoApi.Models;
+using AspDemoApi.DTO;
 
 namespace AspDemoApi.Services;
 

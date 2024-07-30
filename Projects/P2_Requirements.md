@@ -51,3 +51,15 @@ These are not included in the proposal, but do discuss the following:
 - Azure App Service (for application hosting)
 - HTML/CSS/JS or React front end.
 - Jest (Frontend testing)
+
+## Groups
+
+Group 1: Owusuduah, Unnati, Timothy, Tomy, Aser
+
+Group 2: Gabriel, Gislaine, Seamus, Otmane
+
+Group 3: Paul, Francie, Elizabeth, Alex
+
+Group 4: Wilyendri, Priyaben, Alfredo, Jonathan, Cyril
+
+Group 5: Emmanuel, Keval, Christopher, Ian

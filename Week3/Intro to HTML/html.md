@@ -10,6 +10,7 @@
 
 ### Tag
 `<html></html>`
+
 `<img/>`
 
 ### Attributes
@@ -23,3 +24,13 @@ Provides additional behaviors to our tags (elements)
 #### Id vs Class
 - Id: unique, 1-1 between id -> element
 - Class: M-M, many elements can have the same class
+
+
+
+
+I am typing inside the HTML document. I am not a fast typer.
+
+We should be using .html not .md for our activity right?
+#Greetings
+
+#### Hello everyone.

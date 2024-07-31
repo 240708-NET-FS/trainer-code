@@ -7,10 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 //CORS CORS CORS CORS CORS CORS CORS CORS CORS CORS CORS CORS CORS CORS CORS 
 builder.Services.AddCors(co => {
     co.AddPolicy("CORS" , pb =>{
-        pb.WithOrigins("http://localhost:5110") //<- your localhost port here!!!
-            .AllowAnyHeader()
-            .AllowAnyMethod()
-            .AllowCredentials();
+        pb.WithOrigins("*"); //<- your localhost port here!!!
     });
 });
 //CORS CORS CORS CORS CORS CORS CORS CORS CORS CORS CORS CORS CORS CORS CORS

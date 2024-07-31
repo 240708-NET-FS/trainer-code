@@ -33,7 +33,7 @@ public class PokemonController : ControllerBase
     }
 
     [HttpPost("/Trainer/{trainerId}")]
-    public IActionResult CreatePokemonForTrainer(int trainerId, PokemonWithTrainerDTO pokemonToStore)
+    public IActionResult CreatePokemonForTrainer(int trainerId, PokemonDTO pokemonToStore)
     {      
         try
         {

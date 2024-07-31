@@ -21,7 +21,7 @@ public class PokemonService : IPokemonService {
         return _pokeRepo.CreateNewPokemon(newPokemon);
     }
 
-    public Pokemon? CreatePokemonForTrainer(int trainerId, PokemonWithTrainerDTO pokemonToStore)
+    public Pokemon? CreatePokemonForTrainer(int trainerId, PokemonDTO pokemonToStore)
     {
         try
         {

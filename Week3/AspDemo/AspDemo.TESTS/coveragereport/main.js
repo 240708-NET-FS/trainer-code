@@ -219,29 +219,10 @@ for (i = 0, l = charts.length; i < l; i++) {
 
 var assemblies = [
   {
-    "name": "AspDemoApi",
+    "name": "AspDemo.API",
     "classes": [
-      { "name": "AspDemoApi.Controllers.PokemonController", "rp": "AspDemoApi_PokemonController.html", "cl": 0, "ucl": 11, "cal": 11, "tl": 44, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "AspDemoApi.Controllers.TrainerController", "rp": "AspDemoApi_TrainerController.html", "cl": 0, "ucl": 19, "cal": 19, "tl": 53, "cb": 0, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "AspDemoApi.Data.PokemonDBContext", "rp": "AspDemoApi_PokemonDBContext.html", "cl": 0, "ucl": 4, "cal": 4, "tl": 15, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "AspDemoApi.Data.PokeRepo", "rp": "AspDemoApi_PokeRepo.html", "cl": 0, "ucl": 8, "cal": 8, "tl": 22, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "AspDemoApi.Data.TrainerRepo", "rp": "AspDemoApi_TrainerRepo.html", "cl": 0, "ucl": 14, "cal": 14, "tl": 32, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "AspDemoApi.DTO.Pokemon", "rp": "AspDemoApi_Pokemon.html", "cl": 0, "ucl": 6, "cal": 6, "tl": 17, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "AspDemoApi.DTO.PokemonDTO", "rp": "AspDemoApi_PokemonDTO.html", "cl": 0, "ucl": 5, "cal": 5, "tl": 11, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "AspDemoApi.DTO.Trainer", "rp": "AspDemoApi_Trainer.html", "cl": 4, "ucl": 0, "cal": 4, "tl": 13, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "AspDemoApi.DTO.TrainerDTO", "rp": "AspDemoApi_TrainerDTO.html", "cl": 0, "ucl": 2, "cal": 2, "tl": 8, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "AspDemoApi.Exceptions.EmptyListException", "rp": "AspDemoApi_EmptyListException.html", "cl": 0, "ucl": 3, "cal": 3, "tl": 15, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "AspDemoApi.Exceptions.InvalidPokemonException", "rp": "AspDemoApi_InvalidPokemonException.html", "cl": 0, "ucl": 3, "cal": 3, "tl": 15, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "AspDemoApi.Migrations.Init", "rp": "AspDemoApi_Init.html", "cl": 0, "ucl": 75, "cal": 75, "tl": 120, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "AspDemoApi.Migrations.InitialPokeDBCreation", "rp": "AspDemoApi_InitialPokeDBCreation.html", "cl": 0, "ucl": 118, "cal": 118, "tl": 164, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "AspDemoApi.Migrations.PokemonDBContextModelSnapshot", "rp": "AspDemoApi_PokemonDBContextModelSnapshot.html", "cl": 0, "ucl": 69, "cal": 69, "tl": 94, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "AspDemoApi.Migrations.TrainerNull", "rp": "AspDemoApi_TrainerNull.html", "cl": 0, "ucl": 108, "cal": 108, "tl": 156, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "AspDemoApi.Services.PokemonService", "rp": "AspDemoApi_PokemonService.html", "cl": 0, "ucl": 8, "cal": 8, "tl": 23, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "AspDemoApi.Services.TrainerService", "rp": "AspDemoApi_TrainerService.html", "cl": 8, "ucl": 7, "cal": 15, "tl": 33, "cb": 1, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "AspDemoApi.Utilities.PokemonUtility", "rp": "AspDemoApi_PokemonUtility.html", "cl": 0, "ucl": 9, "cal": 9, "tl": 31, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "AspDemoApi.Utilities.TrainerUtility", "rp": "AspDemoApi_TrainerUtility.html", "cl": 0, "ucl": 7, "cal": 7, "tl": 31, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "Example", "rp": "AspDemoApi_Example.html", "cl": 0, "ucl": 2, "cal": 2, "tl": 10, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "Program", "rp": "AspDemoApi_Program.html", "cl": 0, "ucl": 21, "cal": 21, "tl": 43, "cb": 0, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "AspDemoApi.Services.PokemonService", "rp": "AspDemo.API_PokemonService.html", "cl": 0, "ucl": 28, "cal": 28, "tl": 53, "cb": 0, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "AspDemoApi.Services.TrainerService", "rp": "AspDemo.API_TrainerService.html", "cl": 8, "ucl": 25, "cal": 33, "tl": 59, "cb": 1, "tb": 6, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
 ];
 

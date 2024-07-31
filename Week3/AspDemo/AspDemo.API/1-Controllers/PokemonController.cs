@@ -32,11 +32,18 @@ public class PokemonController : ControllerBase
         return Ok(newPokemon);                 
     }
 
-    [HttpPost("{id}")]
-    public IActionResult CreatePokemonForTrainer(int id, PokemonDTO pokemonToStore)
+    [HttpPost("/Trainer/{trainerId}")]
+    public IActionResult CreatePokemonForTrainer(int trainerId, PokemonWithTrainerDTO pokemonToStore)
     {      
-        var newPokemon = _pokeService.CreateNewPokemon(pokemonToStore);
-        return Ok(newPokemon);                 
+        try
+        {
+            var pokemon = _pokeService.CreatePokemonForTrainer(trainerId, pokemonToStore);
+            if(pokemon is null) return NotFound("No such trainer!");
+            return Ok(pokemon);
+        }catch(Exception e)
+        {
+            return BadRequest(e.Message);
+        }        
     }
 
     [HttpGet]
@@ -48,19 +55,10 @@ public class PokemonController : ControllerBase
     [HttpGet("{id}")]
     public IActionResult GetPokemonById(int id)
     {      
-        throw new NotImplementedException();                
-    }
+        var pokemon = _pokeService.GetPokemonById(id);
 
-    [HttpPut("{id}")]
-    public IActionResult UpdatePokemon(int id)
-    {      
-        throw new NotImplementedException();               
-    }
-
-    [HttpDelete("{id}")]
-    public IActionResult DeletePokemon(PokemonDTO pokemonToStore)
-    {      
-        throw new NotImplementedException();                 
+        if(pokemon is null) return NotFound("Pokemon does not exist!");
+        return Ok(pokemon);               
     }
 
 }

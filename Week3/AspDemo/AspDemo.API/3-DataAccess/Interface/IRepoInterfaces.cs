@@ -6,6 +6,7 @@ public interface IPokeRepo
 {
     Pokemon CreateNewPokemon(Pokemon pokemonToCreate);
     List<Pokemon> GetAllPokemon();
+    Pokemon? GetPokemonById(int id);
 }
 
 public interface ITrainerRepo

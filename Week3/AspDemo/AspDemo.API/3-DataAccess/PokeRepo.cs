@@ -23,4 +23,9 @@ public class PokeRepo : IPokeRepo {
         return _context.Pokemon.ToList();
     }
 
+    public Pokemon? GetPokemonById(int id)
+    {
+        return _context.Pokemon.FirstOrDefault(p => p.PokemonId == id);
+    }
+
 }

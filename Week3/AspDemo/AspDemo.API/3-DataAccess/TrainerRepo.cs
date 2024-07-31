@@ -21,12 +21,16 @@ public class TrainerRepo : ITrainerRepo {
 
     public async Task<List<Trainer>> GetAllTrainers()
     {
-        return await _context.Trainers.ToListAsync();
+        return await _context.Trainers
+            .Include(t => t.OwnedPokemon)
+            .ToListAsync();
     }
 
     public async Task<Trainer?> GetTrainerById(int id)
     {        
-        return await _context.Trainers.FirstOrDefaultAsync(t => t.TrainerId == id);
+        return await _context.Trainers
+            .Include(t => t.OwnedPokemon)
+            .FirstOrDefaultAsync(t => t.TrainerId == id);
     }
 
     public async Task<Trainer?> UpdateTrainer(int id, Trainer updateTrainer)

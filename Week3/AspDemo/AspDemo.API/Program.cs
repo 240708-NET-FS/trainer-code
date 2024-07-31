@@ -16,7 +16,17 @@ builder.Services.AddCors(co => {
 //CORS CORS CORS CORS CORS CORS CORS CORS CORS CORS CORS CORS CORS CORS CORS
 
 // Add services to the container.
-builder.Services.AddControllers();
+//The below add json options adds an option to let the json serializer to ignore cycles
+//Otherwise when we get a trainer and include the ownedpokemons the json serializer
+//Would get stuck in an infinite loop because pokemons also have an owner field
+//Which would need the owned pokemons... which would need the owners... and so on... infinitely
+builder.Services.AddControllers()
+.AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+    });
+
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

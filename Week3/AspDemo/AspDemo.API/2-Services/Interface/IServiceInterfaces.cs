@@ -6,7 +6,9 @@ namespace AspDemoApi.Services;
 public interface IPokemonService 
 {
     Pokemon CreateNewPokemon(PokemonDTO pokemonToCreate);
+    Pokemon? CreatePokemonForTrainer(int trainerId, PokemonWithTrainerDTO pokemonToStore);
     List<Pokemon> GetAllPokemon();
+    Pokemon? GetPokemonById(int id);
 }
 
 public interface ITrainerService

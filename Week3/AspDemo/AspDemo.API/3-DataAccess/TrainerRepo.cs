@@ -29,4 +29,21 @@ public class TrainerRepo : ITrainerRepo {
         return await _context.Trainers.FirstOrDefaultAsync(t => t.TrainerId == id);
     }
 
+    public async Task<Trainer?> UpdateTrainer(int id, Trainer updateTrainer)
+    {        
+        Trainer oldTrainer = _context.Trainers.Find(id)!;
+        oldTrainer.Username = updateTrainer.Username;
+        oldTrainer.Password = updateTrainer.Password;
+        await _context.SaveChangesAsync();
+        return oldTrainer;
+    }
+
+    public async Task<Trainer> DeleteTrainer(int id)
+    {        
+        Trainer deleteTrainer = _context.Trainers.Find(id)!;
+        _context.Trainers.Remove(deleteTrainer);
+        await _context.SaveChangesAsync();
+        return deleteTrainer;
+    }
+
 }

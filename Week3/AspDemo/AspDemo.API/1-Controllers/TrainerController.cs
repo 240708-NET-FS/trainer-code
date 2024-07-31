@@ -4,11 +4,15 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AspDemoApi.Controllers;
+
 //Above my class declaration, I will use a data annotation to designate this as an ASP.NET controller
 [ApiController]
 [Route("api/[controller]")]
 public class TrainerController : ControllerBase
 {
+    //This controller uses async methods to excute CRUD operations
+    //It also uses try catch and exceptions
+    
     private readonly ITrainerService _trainerService;
 
     public TrainerController(ITrainerService trainerService)
@@ -31,23 +35,43 @@ public class TrainerController : ControllerBase
 
     [HttpGet("{id}")]
     public async Task<IActionResult> GetTrainersById(int id)
-    {
-        var trainer = await _trainerService.GetTrainerById(id);
-
-        if(trainer is null) return BadRequest("Trainer does not exist!");
-        
-        return Ok(trainer);
+    {        
+        try
+        {
+            var trainer = await _trainerService.GetTrainerById(id);
+            if(trainer is null) return NotFound("Trainer does not exist!");
+            return Ok(trainer);
+        }catch(Exception e)
+        {
+            return BadRequest(e.Message);
+        }
     }
 
-    [HttpPut]
-    public async Task<IActionResult> UpdateTrainer()
+    [HttpPut("{id}")]
+    public async Task<IActionResult> UpdateTrainer(int id, [FromBody] TrainerDTO updateTrainer)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var trainer = await _trainerService.UpdateTrainer(id, updateTrainer);
+            if(trainer is null) return NotFound("Trainer does not exist!");
+            return Ok(trainer);
+        }catch(Exception e)
+        {
+            return BadRequest(e.Message);
+        }
     }
 
-    [HttpDelete]
-    public async Task<IActionResult> DeleteTrainer()
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteTrainer(int id)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var trainer = await _trainerService.DeleteTrainer(id);
+            if(trainer is null) return NotFound("Trainer does not exist!");
+            return Ok(trainer);
+        }catch(Exception e)
+        {
+            return BadRequest(e.Message);
+        }
     }
 }

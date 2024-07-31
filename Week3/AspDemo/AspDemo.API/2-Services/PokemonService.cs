@@ -19,5 +19,10 @@ public class PokemonService : IPokemonService {
         return _pokeRepo.CreateNewPokemon(newPokemon);
     }
 
+    public List<Pokemon> GetAllPokemon()
+    {
+        return _pokeRepo.GetAllPokemon();
+    }
+
 }
 

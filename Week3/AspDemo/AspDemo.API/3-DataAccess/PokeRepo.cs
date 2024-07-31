@@ -15,8 +15,12 @@ public class PokeRepo : IPokeRepo {
     public Pokemon CreateNewPokemon(Pokemon pokemonToCreate) {
         _context.Pokemon.Add(pokemonToCreate);
         _context.SaveChanges();
-
         return pokemonToCreate;
+    }
+
+    public List<Pokemon> GetAllPokemon()
+    {
+        return _context.Pokemon.ToList();
     }
 
 }

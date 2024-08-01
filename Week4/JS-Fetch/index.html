@@ -6,9 +6,38 @@
     <title>Pokemon</title>
 </head>
 <body>
-    <button onclick="getAllPoke()">Get All</button>
+    <!-- <form onsubmit="addPoke(event)" id="addPokeForm"> -->
+    <form id="addPokeForm">
+        <label for="dexId">PokeDex Id</label>               
+        <input type="number" name="dexId" id="dexId" required>
 
-    <button onclick="hello()">Add Poke</button>
+        <label for="pokeName">
+            Pokemon Name
+            <input type="text" name="pokeName" id="pokeName" required>
+        </label>
+
+        <label for="type1">Type 1</label>
+        <input type="text" name="type1" id="type1" required>
+
+        <label for="type2">Type 2</label>
+        <input type="text" name="type2" id="type2">
+
+        <input type="submit" value="Add Pokemon">
+    </form>
+
+    <select onchange="changeCars(event)" name="cars" id="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
+
+
+
+    <br>
+    <br>    
+    <button onclick="getAllPoke()">Get All</button>
+    <button onclick="postPoke()">Add Poke</button>
 
     <script src="index.js"></script>
 </body>

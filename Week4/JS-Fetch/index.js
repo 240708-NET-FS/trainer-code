@@ -41,7 +41,7 @@ pokeForm.addEventListener('submit', function(e) {
         "dexId": Number(e.target.elements['dexId'].value),
         "name": e.target.elements['pokeName'].value,
         "type1": e.target.elements['type1'].value,
-        "type2": e.target.elements['type2'].value          
+        "type2": type2         
     }
     
     fetch('http://localhost:5074/api/Pokemon', {

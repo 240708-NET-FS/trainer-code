@@ -4,7 +4,7 @@ function getAllPoke() {
         .then(resBody => console.log(resBody))
 }
 
-async function postPoke() {
+function postPoke() {
     const poke = {        
         "dexId": 100,
         "name": "Geodude22222222",
@@ -20,5 +20,5 @@ async function postPoke() {
         }
     })
     .then(res => res.json())
-    .then(resBody => console.log(resBody))
+    .then(resBody => console.log(resBody));
 }

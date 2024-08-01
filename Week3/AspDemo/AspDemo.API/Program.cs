@@ -7,7 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 //CORS CORS CORS CORS CORS CORS CORS CORS CORS CORS CORS CORS CORS CORS CORS 
 builder.Services.AddCors(co => {
     co.AddPolicy("CORS" , pb =>{
-        pb.WithOrigins("*");
+        pb.WithOrigins("*")
+        .AllowAnyHeader();
     });
 });
 //CORS CORS CORS CORS CORS CORS CORS CORS CORS CORS CORS CORS CORS CORS CORS

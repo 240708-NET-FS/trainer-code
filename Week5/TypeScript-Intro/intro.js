@@ -41,5 +41,7 @@ baileyID = "123456";
 //baileyID = true; - the compiler will catch this
 var pancakeID;
 pancakeID = "pancake";
+
 //Casting 
 //Casting allows you to override TypeScripts inferred types 
+

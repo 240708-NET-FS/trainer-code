@@ -4,7 +4,7 @@ import { useUser } from '../../UserContext'
 
 
 function UserStatus() {
-    //Accesing the context, via our useUser hook function that we created in UserContext.tsx 
+    //Accessing the context, via our useUser hook function that we created in UserContext.tsx 
     const { user, login, logout } = useUser();
 
     //Storing the user inputted username (from our text input element below) in this component's state.

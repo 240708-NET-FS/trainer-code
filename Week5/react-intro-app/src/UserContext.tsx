@@ -8,7 +8,7 @@ interface UserContextType {
     logout: () => void;
 }
 
-//Next, I have to create a context with a default value. In our case, it will be null atleast for now.
+//Next, I have to create a context with a default value. In our case, it will be null, at least for now.
 const UserContext = createContext<UserContextType | null>(null);
 
 //We have to create a context provider. We will render other components, that need access to this context, 

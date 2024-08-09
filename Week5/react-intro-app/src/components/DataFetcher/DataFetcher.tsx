@@ -6,7 +6,7 @@ import axios from 'axios';
 function DataFetcher() {
 
     //Using useState to manage the data returned from the API (should be user forum posts)
-    const [posts, setPosts] = useState<{ id: Number; Title: String;}[] | null>(null);
+    const [posts, setPosts] = useState<{ id: number; title: String;}[] | null>(null);
 
     const url = 'https://jsonplaceholder.typicode.com/posts';
 
@@ -22,8 +22,8 @@ function DataFetcher() {
                 //Using Axios to fetch data from JSONPlaceholder API
                 const response = await axios.get(url);
                 
-                //Send the fetched data to my state
-                setPosts(response.data);
+                //Send the fetched data to my state, only saving the first 5
+                setPosts(response.data.slice(0,5));
 
             } catch (error) {
                 console.error('Error fetching posts: ', error)
@@ -32,14 +32,17 @@ function DataFetcher() {
 
         //Calling my fetchPosts() method to get my posts
         fetchPosts();
+        
     }, [url]); //End useEffect lambda, notice the empty dependency array
 
   return (
-    <div>DataFetcher
-        <PostList />
+    <div>
+        <h3>Here are my posts: </h3>
+        {/*Passing the fetched posts from the above code, as props into my PostList child component */}
+        {posts ? <PostList posts={posts} /> : <p>Loading posts...</p>}
     </div>
     
-  )
+  );
 }
 
 export default DataFetcher

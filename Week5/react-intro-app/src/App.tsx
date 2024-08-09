@@ -1,6 +1,7 @@
 import Counter from "./components/Counter/Counter";
 import UserStatus from "./components/UserStatus/UserStatus";
 import DataFetcher from "./components/DataFetcher/DataFetcher";
+import FormWithReducer from "./components/FormWithReducer/FormWithReducer";
 import { UserProvider } from "./UserContext";
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
         {/*Displaying my DataFetcher and it's child PostList that is rendered inside of it */}
         <DataFetcher />
         {/*Displaying my form that leverages a reducer*/}
-        
+        <FormWithReducer />
       </div>
   
    

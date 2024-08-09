@@ -18,6 +18,8 @@ function App() {
         <Counter />
         {/*Displaying my DataFetcher and it's child PostList that is rendered inside of it */}
         <DataFetcher />
+        {/*Displaying my form that leverages a reducer*/}
+        
       </div>
   
    

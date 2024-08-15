@@ -43,6 +43,7 @@ These are not included in the proposal, but do discuss the following:
 - ASP.NET Core (Web API Framework)
 - xUnit/Moq (Backend Testing)
 - Azure (for application hosting)
+- Jest for front end testing
 - React as front end
 - Github Action or Azure Pipeline for CI/CD
 - Docker for containerization

@@ -9,7 +9,6 @@
 | Must Have         | Create and explain JSX                                                                                                     |
 | Should Have        | Use Axios or Fetch to make HTTP requests                                                                                   |
 | Should Have        | Route between Components through the use of BrowserRouter                                                                  |
-| Should Have        | Leverage route guards to change the routing behavior based on the given state                                              |
 | Should Have        | Thinking in React, React paradigms: Data is immutable, Data always flows down, React is lightweight and un-opinioned, etc  |
 | Should Have        | Able to create and understand the different types of Function Components: presentation components and container components |
 | Should Have        | Add additional NPM libraries to a React Project to add new, already created functionality                                  |

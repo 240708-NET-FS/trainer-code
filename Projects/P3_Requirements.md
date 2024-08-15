@@ -7,7 +7,7 @@ For P3, you and your team will create a full stack web application utilizing all
 ## Requirements
 
 - Application Must build and run
-- Back end Unit Testing (70% code coverage for Services and Models layer)
+- Back end Unit Testing (70% code coverage for Services layer)
 - Front-end Unit Testing (20% code coverage)
 - User Authentication 
 - Both ends hosted on Azure Cloud Services

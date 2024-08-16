@@ -12,9 +12,9 @@
   - take the built artifact and deploy it to an environtment (testing/QA, dev teams env, etc)
 
 - |---Build----|---Test----|---Release/Artifact---|---Deploy---|
-- |Continuous Integration|
-- |------------Continuous Delivery--------------|
-- |--------------------Continuous Deployment-----------------|
+- |-Continuous Integration-|
+- |------------Continuous Delivery----------------|
+- |--------------------Continuous Deployment-------------------|
 
 
 ## Building Pipelines

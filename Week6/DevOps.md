@@ -1,5 +1,4 @@
 # [DevOps](https://www.atlassian.com/devops)
-- Philosophy 
 - CI/CD pipeline
 - CI:Continuous Integration
 - CD: Continuous Delivery / Continous Deployment

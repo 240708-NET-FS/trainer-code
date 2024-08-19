@@ -14,7 +14,6 @@
 - what is image?
 - what is container?
 - what is a tag?
-- what is container?
 - what is image registry?
 - What is base image?
 
@@ -43,3 +42,7 @@
     - `docker build`
     - `docker build -t dockerhubusername/imagename:tag-name relative-path-to-folder-containing-dockerfile`
     - ex: `docker build -t kunglorev/aspdemo:latest .`
+- For Azure WebApp, ASPNET needs to serve over port 80
+    - Include in dockerfile in the run section: `ENV ASPNETCORE_URLS=http://*:80`
+- To run image locally with env variables to provide connection string:
+ - docker run -d -p 12123:80 -e "ConnectionStrings:DefaultConnection=YOURCONNECTIONSTRING" kunglorev/aspdemo:0.0.1

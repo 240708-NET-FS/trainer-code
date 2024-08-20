@@ -7,7 +7,7 @@ For P3, you and your team will create a full stack web application utilizing all
 ## Requirements
 
 - Application Must build and run
-- Back end Unit Testing (70% code coverage for Services and Models layer)
+- Back end Unit Testing (70% code coverage for Services layer)
 - Front-end Unit Testing (20% code coverage)
 - User Authentication
 - Both ends hosted on Azure Cloud Services
@@ -43,6 +43,7 @@ These are not included in the proposal, but do discuss the following:
 - ASP.NET Core (Web API Framework)
 - xUnit/Moq (Backend Testing)
 - Azure (for application hosting)
+- Jest for front end testing
 - React as front end
 - Github Action or Azure Pipeline for CI/CD
 - Docker for containerization

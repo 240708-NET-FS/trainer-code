@@ -12,7 +12,7 @@ For P3, you and your team will create a full stack web application utilizing all
 - User Authentication
 - Both ends hosted on Azure Cloud Services
 - CI/CD Pipeline
-- Docker Containerized backend
+- Docker Containerized backend (Stretch goal!)
 
 ## Proposal
 

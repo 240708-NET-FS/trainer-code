@@ -23,5 +23,5 @@
     - eg. Improve this prompt: `Show me some fake data for people objects I can use for testing`
         - Provide more context: `Print a list of 5 people objects in C# with the following fields: firstName, lastName, dateOfBirth, email`
         - Provide examples: `Print the data in this format: Person1[firstName=John, lastName=Smith, dateOfBirth=1/1/2000, email=jsmith@gmail.com]`
-    - Improve this prompt? `Translate this text: Hola y cómo te va`
+    - Improve this prompt: `Translate this text: Hola y cómo te va`
         - Provide more context: `Translate this text from Spanish to French: Hola y cómo te va`
